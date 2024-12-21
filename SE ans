@@ -1,0 +1,117 @@
+1.
+Design wireframes for homepage redesign
+
+Write unit tests for new API endpoints
+
+Research deployment strategies for containerized apps
+
+Prepare documentation for the latest release
+
+Create SQL queries for the reporting module
+
+
+2.BUS TICKET BOOKING IN FIGMA TOOL
+
+
+3.e-commerce in apps
+4.Create user registration page
+Develop API for login
+Design homepage layout
+Implement password reset feature
+Set up database schema
+5.
+Requirement	                                Category	            Justification
+Search books by title and author	          Must-Have	   Essential for basic system functionality and user experience.
+Online book reservation system	            Must-Have	   Key feature for improving accessibility and convenience for users.
+Generate monthly reports on borrowed books	Must-Have	   Critical for administrative tasks and decision-making.
+Email notifications for overdue books	      Should-Have	 Enhances user engagement but not critical for basic operations.
+QR code scanning for borrowing/returning	  Should-Have	 Improves efficiency but requires additional resources for implementation.
+User-friendly dashboard for librarians	    Must-Have	   Essential for operational efficiency and ease of use by library staff.
+Review and rate books	                      Could-Have	 Adds value to users but is not critical to the library's core operations.
+Chatbot for user assistance	                Could-Have	 Enhances user experience but is less impactful compared to other functionalities.
+Mobile app version of the system	          Should-Have	 Increases accessibility but requires significant development time.
+Multi-language support	                    Won’t-Have	 Valuable for diverse users but deferred due to resource and time constraints.
+
+
+6.
+Develop book search functionality
+Create user login page
+Implement QR code scanning
+Build monthly report generation
+Enable email notifications for overdue books
+
+7.
+9.
+git clone<url>
+cd <url>
+git checkout -b same
+git add .
+git commit - m "commit message describing the changes"
+git push origin same
+
+10.
+git clone<url>
+cd <url>
+git checkout -b same
+git add .
+git commit - m "commit message describing the changes"
+git push origin same
+git checkout main
+git pull origin main
+git checkout same
+
+11.
+docker file
+FROM nginx:latest
+COPY ./index.html /usr/share/nginx/html/index.html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+terminal:
+docker --version
+docker build -t static-website .
+docker run -d -p 8080:80 --name static-website-container static-website
+
+
+12.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.21
+        ports:
+        - containerPort: 80
+
+kubectl apply -f nginx-deployment.yaml
+kubectl get pods
+kubectl expose deployment nginx-deployment --type=NodePort --name=nginx-service
+kubectl get svc
+kubectl scale deployment nginx-deployment --replicas=4
+kubectl get pods
+kubectl get svc
+DELETE:
+kubectl delete svc nginx-service
+kubectl delete deployment nginx-deployment
+JENKINS:
+docker pull jenkins/jenkins:lts
+docker run -d -p 8080:8080 -p 50000:50000 --name jenkins -v 
+jenkins_home:/var/jenkins_home -v //var/run/docker.sock:/var/run/docker.sock 
+jenkins/jenkins:lts
+
+
+
+
+
+
+
