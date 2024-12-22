@@ -247,7 +247,20 @@ git push origin feature-login
 git checkout main
 git pull origin main
 
-25.
+25.FORK REPOSTIORY:
+git clone <url>
+cd <url>
+git remote add upstream <url>
+git fetch upstream
+git checkout main
+git merge upstream/main
+git checkout -b feature-new-functionality
+git add .
+git commit -m "Add new feature: [brief description]"
+git push origin feature-new-functionality
+git pull origin main
+
+
 
 
 
