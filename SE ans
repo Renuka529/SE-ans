@@ -122,10 +122,20 @@ git push origin main
 
 16.
 
+19.CI/CD PIPELINE
+git clone <url>
+cd <url>
+git add .
+git commit -m "initial commit with flask app and docker file"
+git push origin main
+git clone <url>
+45yj
+
 20.GitHub repository for a personal project
 git clone <url>
 cd <url>
 git add .
+
 git commit -m "commit message describing the change"
 git push origin main
 
