@@ -231,6 +231,28 @@ git add .
 git commit -m "commit message describing the change"
 cat README.md
 
+24.FEATURE LOGIN:
+git clone <url>
+cd <url>
+git checkout -b feature-login
+login.py:
+def login(username, password):
+    if username == "admin" and password == "password123":
+        return "Login successful"
+    else:
+        return "Invalid credentials"
+git add login.py
+git commit -m "Add simple login function"
+git push origin feature-login
+git checkout main
+git pull origin main
+
+25.
+
+
+
+
+
 
 
 
