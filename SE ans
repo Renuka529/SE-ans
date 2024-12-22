@@ -110,7 +110,6 @@ jenkins_home:/var/jenkins_home -v //var/run/docker.sock:/var/run/docker.sock
 jenkins/jenkins:lts
 
 15.IMPLEMENT VERSION CONTROL
-
 git clone <url>
 cd <url>
 git checkout -b same
@@ -122,6 +121,30 @@ git merge same
 git push origin main
 
 16.
+
+20.GitHub repository for a personal project
+git clone <url>
+cd <url>
+git add .
+git commit -m "commit message describing the change"
+git push origin main
+
+21.git clone <url>
+cd <url>
+git add .
+git commit -m "Fixed typo in README"
+git push origin main
+git push origin master
+
+22.
+git clone <url>
+cd <url>
+edit file README.md
+git add .
+git commit -m""
+git push origin main
+
+
 
 
 
