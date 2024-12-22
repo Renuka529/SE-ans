@@ -109,6 +109,21 @@ docker run -d -p 8080:8080 -p 50000:50000 --name jenkins -v
 jenkins_home:/var/jenkins_home -v //var/run/docker.sock:/var/run/docker.sock 
 jenkins/jenkins:lts
 
+15.IMPLEMENT VERSION CONTROL
+
+git clone <url>
+cd <url>
+git checkout -b same
+git add .
+git commit -m "Add initial code for module1"
+git push origin same
+git checkout main
+git merge same
+git push origin main
+
+16.
+
+
 
 
 
