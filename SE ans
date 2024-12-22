@@ -144,6 +144,14 @@ git add .
 git commit -m""
 git push origin main
 
+23.
+git clone<url>
+cd <url>
+git add .
+git commit -m "commit message describing the change"
+cat README.md
+
+
 
 
 
