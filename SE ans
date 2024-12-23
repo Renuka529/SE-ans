@@ -41,13 +41,19 @@ Build monthly report generation
 Enable email notifications for overdue books
 
 7 and 8 in jira did
-9.
-git clone<url>
-cd <url>
-git checkout -b same
+9.FORK AND PULL:
+git clone our<url>
+cd<url>
+git remote add upstream<rep-git>
+git remote -v
+git fetch upstream
+git checkout min
+git merge upstream/main
+git checkout -b feature-branch
+echo "hello world">> file.txt
 git add .
-git commit - m "commit message describing the changes"
-git push origin same
+git commit -m"add file.txt"
+git push origin feature-branch
 
 10.
 git clone<url>
@@ -67,10 +73,11 @@ COPY ./index.html /usr/share/nginx/html/index.html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 terminal:
-docker --version
+ls
 docker build -t static-website .
-docker run -d -p 8080:80 --name static-website-container static-website
-
+docker images
+docker run -d -p 8081:80 static-website
+docker ps
 
 12.
 apiVersion: apps/v1
@@ -122,7 +129,8 @@ git push origin main
 
 16.
 
-19.APP.PY:
+19.CI/CD:
+APP.PY:
 from flask import Flask
 
 app = Flask(_name_)
@@ -200,6 +208,16 @@ git commit -m "initial commit with flask app and docker file"
 git push origin main
 git clone <url>
 45yj
+17.DOCKER IMAGES:
+FROM python:3.12-slim
+WORKDIR /app
+COPY first.py /app/
+CMD ["python","first.py"]
+commands:
+docker build -t python:3.11.7 .
+docker run python:3.11.7
+docker push renu01/python:3.11.7
+
 
 20.GitHub repository for a personal project
 git clone <url>
